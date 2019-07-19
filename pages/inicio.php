@@ -2,8 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="../dist/img/Helsa/favicon.ICO" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Blank Page</title>
+  <title>Helsa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -17,6 +18,8 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <!--EstilosPersonales-->
+  <link rel="stylesheet" href="../dist/css/EstilosPersonales.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -43,13 +46,15 @@
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
-        <li class="header">Menú</li>
+        <li class="header">Menú de Navegación</li>
+        <li>
+          <a href="inicio.php"><i class="glyphicon glyphicon-home"></i> <span>Inicio</span></a>
+        </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard text-green"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="inicio.php"><i class="fa fa-circle-o"></i> Inicio</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
           </ul>
         </li>

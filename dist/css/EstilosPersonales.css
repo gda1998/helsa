@@ -1,0 +1,14 @@
+#imagenGrande{
+    width: 120px;
+    margin-top: -5px;
+    margin-left: 7px;
+}
+
+#imagenChica{
+    width: 30px;
+    height: 30px;
+}
+
+#logoMercury{
+    width: 75px;
+}

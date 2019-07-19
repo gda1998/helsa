@@ -1,10 +1,6 @@
 <?php
 $footer = '  
 <footer class="main-footer">
-<div class="pull-right hidden-xs">
-  <b>Version</b> 2.3.3
-</div>
-<strong>Copyright &copy; 2014-2015 <a href="#">Almsaeed Studio</a>.</strong> All rights
-reserved.
+<strong>2019 - Un sitio de <a target="_blank" href="../MercuryEXE/index.php"><img id="logoMercury" src="../dist/img/MercuryExe/MercuryName.JPEG"></a></strong>
 </footer>';
 ?>
