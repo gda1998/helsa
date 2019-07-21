@@ -47,6 +47,7 @@
             </div>
         </form>
     </div>
+    <footer><a href="https://unsplash.com/" target="blank">Fotografía por Andrew Neel de Unsplash</a></footer>
 <!-- jQuery 2.2.0 -->
 <script src="plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
