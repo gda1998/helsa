@@ -1,0 +1,57 @@
+body{
+    background-image: url(../img/andrew-neel-308138-unsplash.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-top: 9%;
+}
+#contenedor{
+    float: right;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 30px;
+    border-radius:7px;
+    background-color: rgba(0,0,0,.5);
+}
+#logo{
+    display:block;
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p{
+    color: #fff;
+    margin-top: 7px;
+    text-align: center;
+}
+form{
+    margin-bottom: 20px;
+}
+label{
+    color:#fff;
+}
+.input-group input {
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+.input-group input:focus {
+    border-color: #0171C7;
+    box-shadow: 0 0 2px 1px #0171C7;
+}
+.input-group span {
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+.form-group button {
+    color: #fff;
+    border-color: #fff;
+    background: transparent;
+}
+.form-group button:hover {
+    color: #0171C7;
+    border-color: #0171C7;
+    box-shadow: 0 0 2px 1px #0171C7;
+}
