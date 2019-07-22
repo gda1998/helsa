@@ -39,10 +39,10 @@ $header = '
           <!-- Menu Footer-->
           <li class="user-footer">
             <div class="pull-left">
-              <a href="#" class="btn btn-default btn-flat">Profile</a>
+              <a href="#" class="btn btn btn-flat btnMenuFooter"><i class="glyphicon glyphicon-user"></i> Mi Cuenta</a>
             </div>
             <div class="pull-right">
-              <a href="#" class="btn btn-default btn-flat">Sign out</a>
+              <a href="#" class="btn btn btn-flat btnMenuFooter"><i class="glyphicon glyphicon-log-out"></i> Salir</a>
             </div>
           </li>
         </ul>

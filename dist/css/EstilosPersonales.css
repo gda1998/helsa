@@ -12,3 +12,12 @@
 #logoMercury{
     width: 75px;
 }
+
+.btnMenuFooter{
+    background-color: #051C59;
+    color: #fff;
+}
+.btnMenuFooter:hover{
+    background-color: #041441;
+    color: #fff;
+}
