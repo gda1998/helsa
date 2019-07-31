@@ -21,3 +21,14 @@
     background-color: #041441;
     color: #fff;
 }
+.color-helsa {
+	background-color: #0171C7;
+	color: #FFFFFF;
+}
+.box.box-helsa{
+    border-top-color:#0171C7;
+}
+.btnSearch{
+    border-color:rgba(0,0,0,0.1);
+    background:rgba(255,255,255,0.9);
+}
