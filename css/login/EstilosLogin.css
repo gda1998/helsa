@@ -1,5 +1,5 @@
 body{
-    background-image: url(../img/andrew-neel-308138-unsplash.jpg);
+    background-image: url(../../dist/img/andrew-neel-308138-unsplash.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -54,24 +54,4 @@ label{
     color: #0171C7;
     border-color: #0171C7;
     box-shadow: 0 0 2px 1px #0171C7;
-}
-/*Estilos del footer*/
-footer{
-    background: rgba(255,255,255,.5);
-    position: fixed;
-    right: 1px;
-    bottom: 0;
-}
-footer a{
-    display: table-cell;
-    font-style: italic;
-    color:#000;
-}
-footer a:hover{
-    text-decoration: none;
-    color: #4c4c4c;
-}
-footer a:focus{
-    text-decoration: none;
-    color: #4c4c4c;
 }

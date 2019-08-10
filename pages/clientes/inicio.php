@@ -19,7 +19,7 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
   <!--EstilosPersonales-->
-  <link rel="stylesheet" href="../../dist/css/EstilosPersonales.css">
+  <link rel="stylesheet" href="../../css/EstilosPersonales.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -51,7 +51,7 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-      <div class="col-lg-3 col-xs-6">
+      <div class="col-lg-offset-2 col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box color-helsa">
             <div class="inner">
@@ -60,20 +60,6 @@
             </div>
             <div class="icon">
               <i class="fa fa-shopping-cart"></i>
-            </div>
-            <a href="#" class="small-box-footer">Más Información <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-3 col-xs-6">
-          <!-- small box -->
-          <div class="small-box color-helsa">
-            <div class="inner">
-              <h3 id="counterNotifications">4</h3>
-              <p>Nuevas Notificaciones</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-envelope"></i>
             </div>
             <a href="#" class="small-box-footer">Más Información <i class="fa fa-arrow-circle-right"></i></a>
           </div>

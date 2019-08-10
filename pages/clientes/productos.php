@@ -18,14 +18,13 @@
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
-  <!-- Select2 -->
-  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- SweetAlert -->
   <link rel="stylesheet" href="../../plugins/New_SweetAlert/dist/sweetalert.css">
   <script type="text/javascript" src="../../plugins/New_SweetAlert/dist/sweetalert.js"></script>
   <script type="text/javascript" src="../../plugins/New_SweetAlert/dist/sweetalert.min.js"></script>
-  <!--EstilosPersonales-->
-  <link rel="stylesheet" href="../../dist/css/EstilosPersonales.css">
+  <!--Estilos-->
+  <link rel="stylesheet" href="../../css/EstilosPersonales.css">
+  <link rel="stylesheet" href="../../css/clientes/productos.css">
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -73,25 +72,26 @@
           	</div>
         </div>
         <div class="box-body">
-          <form class="form-row">
+          <div class="form-row">
             
             <div class="form-group col-md-4">
                 <label>Filtrar por Categoría</label>
-                <select id="cmbCategoria" class="form-control select2" style="width:100%;"></select>
+                <select id="cmbCategoria" class="form-control"></select>
             </div>
 
-            <div class="form-group com-md-8">
+            <div class="form-group col-md-8">
                 <label>Producto</label>
-                <div class="input-group">
-                    <select id="cmbProductos" class="form-control select2" style="width:100%;"></select>
+                <div id="divTxtProductos" class="input-group">
+                    <input id="txtProductos" type="text" class="form-control" onInput="inputProductos();" onkeyup="return tecladoTxtProductos(event);">
                     <span class="input-group-btn">
-                        <button id="btnSearch" type="submit" class="btn btn btnSearch"><i class="fa fa-search"></i>
+                        <button id="btnSearch" type="submit" class="btn btn btnSearch" onclick="resultadosProductos(0);"><i class="fa fa-search"></i>
                         </button>
                     </span>
                 </div>
+                <div id="divBusqueda"></div>
             </div>
 
-          </form>
+          </div>
         </div>
         <!-- /.box-body -->
       </div>
@@ -107,7 +107,7 @@
           	</div>
         </div>
         <div class="box-body">
-          <div id="div" class="col-md-12"></div>
+          <div id="divResultados"></div>
         </div>
         <!-- /.box-body -->
       </div>
@@ -130,8 +130,8 @@
 <script src="../../plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../../bootstrap/js/bootstrap.min.js"></script>
-<!-- Select2 -->
-<script src="../../plugins/select2/select2.full.min.js"></script>
+<!--jPaginate-->
+<script src="../../plugins/jPaginate/jQuery.paginate.js"></script>
 <!-- SlimScroll -->
 <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->

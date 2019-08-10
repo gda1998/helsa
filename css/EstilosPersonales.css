@@ -1,3 +1,4 @@
+/*Tamanio de los logos de Helsa*/
 #imagenGrande{
     width: 120px;
     margin-top: -5px;
@@ -9,26 +10,27 @@
     height: 30px;
 }
 
+/*Tamanio del logo de Mercury*/
 #logoMercury{
     width: 75px;
 }
 
+/*Estilos de .btnMenuFooter*/
 .btnMenuFooter{
     background-color: #051C59;
     color: #fff;
 }
+
 .btnMenuFooter:hover{
     background-color: #041441;
     color: #fff;
 }
+/*Otros estilos*/
 .color-helsa {
 	background-color: #0171C7;
 	color: #FFFFFF;
 }
+
 .box.box-helsa{
     border-top-color:#0171C7;
-}
-.btnSearch{
-    border-color:rgba(0,0,0,0.1);
-    background:rgba(255,255,255,0.9);
 }
