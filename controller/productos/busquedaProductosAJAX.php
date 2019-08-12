@@ -1,6 +1,8 @@
 <?php
     //Aca se incluyen el archivo de la conexion a la BD
     include '../config/conexion.php';
+    //Aca se incluyen el archivo que contiene las variables para la encriptacion de datos
+    include '../config/variablesEncriptacion.php';
     //Si la conexion es nula se regresa al archivo js
     if($conexion==null){
         return;
@@ -8,24 +10,25 @@
     //Si las variables que necesito para la consulta en la parte de where no existe se mando un error
     //de que debe ingresar las variables
     if(!isset($_POST['txtProductos']) || !isset($_POST['idCategoria'])){
-        echo '<b>Error </b>: Ingrese las variables correspondientes';
+        echo '<b>Error </b>: Ingrese las variables correspondientes.';
         return;
     }
     //Si txtProductos que se utiliza para una de la condiciones de la consulta esta vacio o solo tiene como
     //valor una cadena con puros espacios se manda un error de que no se agregó valor a la busqueda
     if($_POST['txtProductos'] == "" || ctype_space($_POST['txtProductos'])){
-        echo '<b>Error </b>: No se agregó ningun valor para la búsqueda';
+        echo '<b>Error </b>: No se agregó ningun valor para la búsqueda.';
         return;
     }
-    //Si idCategoria que se utiliza para una de la condiciones de la consulta no tiene como valor un numero
+    //Si idCategoria que se utiliza para una de la condiciones de la consulta al momento de desencriptar esta vacio
     //(que es el id de categoria) se manda un error de que el valor es invalido
-    if(!is_numeric($_POST['idCategoria'])){
-        echo '<b>Error </b>: El valor de categoría es inválido';
+    if(openssl_decrypt($_POST['idCategoria'],COD,KEY) == ""){
+        echo '<b>Error </b>: El valor de categoría es inválido.';
         return;
     }
     //Obtengo las variables que necesito para la consulta de una manera segura
     $txtProductos = $conexion->real_escape_string(htmlentities($_POST['txtProductos']));
     $idCategoria = $conexion->real_escape_string(htmlentities($_POST['idCategoria']));
+    $idCategoria = openssl_decrypt($idCategoria,COD,KEY);
     //Hago un select del codigo, la descripcion y la imagen de los productos filtrando a aquellos
     //en donde la descripcion tenga el patron que se mando desde js
     $query = "SELECT cod_producto, descripcion, imagen from Producto WHERE descripcion LIKE '%".$txtProductos."%'";

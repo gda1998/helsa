@@ -17,20 +17,29 @@
 
 /*Estilos de .btnMenuFooter*/
 .btnMenuFooter{
-    background-color: #051C59;
     color: #fff;
+    background-color: #051C59;
 }
 
 .btnMenuFooter:hover{
-    background-color: #041441;
     color: #fff;
+    background-color: #041441;
 }
 /*Otros estilos*/
+/*Estilos de los small box*/
 .color-helsa {
+    color: #FFFFFF;
 	background-color: #0171C7;
-	color: #FFFFFF;
 }
 
+/*Estilos de border de box-body*/
 .box.box-helsa{
     border-top-color:#0171C7;
+}
+
+/*Estilos del callout*/
+.callout-helsa{
+    color:#fff; 
+    background:#051C59; 
+    border-color:#041441;
 }

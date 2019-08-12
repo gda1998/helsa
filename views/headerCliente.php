@@ -1,4 +1,13 @@
 <?php
+    session_start();
+    ob_start();
+    $contadorCarrito;
+    if(isset($_SESSION['cantidadCarrito'])){
+      $contadorCarrito = $_SESSION['cantidadCarrito'];
+    }
+    else{
+      $contadorCarrito = "";
+    }
 $header = '
 <header class="main-header">
 <!-- Logo -->
@@ -23,9 +32,9 @@ $header = '
 
     <!-- Notifications: style can be found in dropdown.less -->
     <li>
-      <a href="#">
+      <a href="mi_carrito.php">
         <i class="fa fa-shopping-cart"></i>
-        <span id="spanCarrito" class="label label-danger"></span>
+        <span id="spanCarrito" class="label label-danger">'.$contadorCarrito.'</span>
       </a>
     </li>
     

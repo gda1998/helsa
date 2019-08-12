@@ -1,6 +1,8 @@
 <?php
     //Aca se incluyen el archivo de la conexion a la BD
     include '../config/conexion.php';
+    //Aca se incluyen el archivo que contiene las variables para la encriptacion de datos
+    include '../config/variablesEncriptacion.php';
     //Si la conexion es nula se regresa al archivo js
     if($conexion==null){
         return;
@@ -18,12 +20,12 @@
         </script>';
         return;
     }
-    //Si la consulta fue exitosa declaro la variable cadena que es la que voy a regresa al archivo js para llenar
-    //el select
-    $cadena = "<option value='0'>Sin Filtros</option>";
+    //Si la consulta fue exitosa declaro la variable cadena que es la que voy a regresar al archivo js para llenar
+    //el select encriptando el id de categoria
+    $cadena = "<option value='".openssl_encrypt(0,COD,KEY)."'>Sin Filtros</option>";
     //Llenado de la variable cadena con los valores del query
     while($datos=$resultado->fetch_assoc()){
-        $cadena = $cadena.'<option value="'.$datos['id_categoria'].'">'.$datos['descripcion'].'</option>';
+        $cadena = $cadena.'<option value="'.openssl_encrypt($datos['id_categoria'],COD,KEY).'">'.$datos['descripcion'].'</option>';
     }
     //Cierra la conexion a la BD
     $conexion->close();
