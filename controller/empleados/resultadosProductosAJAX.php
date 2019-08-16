@@ -3,8 +3,6 @@
     include '../config/conexion.php';
     //Aca se incluyen el archivo que contiene las variables para la encriptacion de datos
     include '../config/variablesEncriptacion.php';
-    //Aca se incluye el archivo que contiene el metodo para dar formato a los precios
-    include '../config/formatosNumeros.php';
     //Si la conexion es nula se regresa al archivo js
     if($conexion == null){
         return;
@@ -12,13 +10,13 @@
     //Si la variable que necesito para la consulta en la parte de where no existe se mando un error
     //de que debe ingresar la variable
     if(!isset($_POST['condicion'])){
-        echo '<b>Error </b>: Ingrese la variable correspondientes.';
+        echo '<b>Error </b>: Ingrese la variable correspondientes';
         return;
     }
     //Si la variable que se utiliza para la consulta esta vacio o solo tiene como
     //valor una cadena con puros espacios se manda un error de que no se agregó valor a la busqueda
     if($_POST['condicion'] == "" || ctype_space($_POST['condicion'])){
-        echo '<b>Error </b>: No se agregó ningun valor para la búsqueda.';
+        echo '<b>Error </b>: No se agregó ningun valor para la búsqueda';
         return;
     }
     //Obtengo la variable que necesito para la consulta de una manera segura y la guardo en $condicion
@@ -30,7 +28,7 @@
     //Aca se pregunta el tipo de variable de $condicion, si es de tipo numerico, la consulta se filtrara por el
     //codigo del producto
     if(is_numeric($condicion)){
-        $query = $query." WHERE cod_producto=".(int)$condicion;
+        $query = $query." WHERE cod_producto=".$condicion;
     }
     //De lo contrario, la consulta se filtrara por el patron de caracteres que tenga descripcion
     else{
@@ -52,7 +50,6 @@
     $cadena = "";
     //Llenado de la variable cadena con los valores del query
     while($datos = $resultado->fetch_assoc()){
-        $precio = formatoNumero((int)$datos['precio']);
         $cadena = $cadena.'<div class="col-md-4 col-sm-6 pagination__item">
         <div class="card">
           <img src="'.$datos['imagen'].'">
@@ -60,20 +57,20 @@
           <div class="card-container">
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Categoría: '.$datos['categoria'].'</li>
-            <li class="list-group-item">Precio: $'.$precio.' MXN</li>
+            <li class="list-group-item">Precio: $'.$datos['precio'].' MXN</li>
             <li class="list-group-item" style="margin-bottom:-15px;">
               <div class="form-group row">
-                <label class="col-sm-3 labelCard">Cantidad</label>
+                <label class="col-sm-3 labelCard">Nuevo precio</label>
                 <div class="col-sm-9">
-                  <input id="txtCantProducto'.openssl_encrypt($datos['cod_producto'],COD,KEY).'" type="number" class="form-control" 
-                    value="1" min="1" onkeydown="return caracteresEspecificos(event);" 
-                    onkeyup="sinCeros(this,this.value);">
+                <input id="txtPrecio" type="text" class="form-control"
+                  min="1" onkeydown="return soloNumeros(event);"
+                  onkeyup="sinCeros(this,this.value);">
                 </div>
               </div>
             </li>
             <li class="list-group-item">
-              <button id="'.openssl_encrypt($datos['cod_producto'],COD,KEY).'" onclick="AgregaAlCarrito(this);" 
-              class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Agregar al Carrito</button>
+              <button id="'.openssl_encrypt($datos['cod_producto'],COD,KEY).'" onclick="ActualizarPrecio(this);"
+              class="btn btn-primary"><i class="ion ion-android-refresh"></i> Actualizar precio</button>
             </li>
           </ul>
           <form id="formProducto'.openssl_encrypt($datos['cod_producto'],COD,KEY).'" style="display:none;">

@@ -1,0 +1,3 @@
+function tipo_textbox(){
+    
+}

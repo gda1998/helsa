@@ -221,7 +221,7 @@ function AgregaAlCarrito(button){
                     type: "success",
                     showCancelButton: true,
                     confirmButtonClass: "btn-success",
-                    confirmButtonText: "Confirmar Compra",
+                    confirmButtonText: "Ir al Carrito",
                     cancelButtonText: "Seguir Comprando",
                     closeOnConfirm: true,
                     closeOnCancel: true

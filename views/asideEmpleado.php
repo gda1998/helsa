@@ -1,5 +1,5 @@
 <?php
-    $aside = ' 
+    $aside = '
     <!-- Left side column. contains the sidebar -->
     <aside class="main-sidebar">
       <!-- sidebar: style can be found in sidebar.less -->
@@ -20,16 +20,10 @@
             <a href="inicio.php"><i class="glyphicon glyphicon-home"></i> <span>Inicio</span></a>
           </li>
           <li>
-            <a href="productos.php"><i class="glyphicon glyphicon-tags"></i> <span>Productos</span></a>
+            <a href="pedidos.php"><i class="glyphicon glyphicon-inbox"></i> <span>Actualizar pedidos</span></a>
           </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="glyphicon glyphicon-inbox"></i> <span>Pedidos</span> <i class="fa fa-angle-left pull-right"></i>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="pedidos_proceso.php"><i class="glyphicon glyphicon-time"></i> En Proceso</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-ok-sign"></i> Entregados</a></li>
-            </ul>
+          <li>
+            <a href="productos.php"><i class="glyphicon glyphicon-tags"></i> <span>Actualizar productos</span></a>
           </li>
         </ul>
       </section>

@@ -2,7 +2,7 @@
     session_start();
     ob_start();
     $contadorCarrito;
-    if(isset($_SESSION['cantidadCarrito'])){
+    if(isset($_SESSION['cantidadCarrito']) && $_SESSION['cantidadCarrito']!=0){
       $contadorCarrito = $_SESSION['cantidadCarrito'];
     }
     else{

@@ -43,3 +43,9 @@
     background:#051C59; 
     border-color:#041441;
 }
+
+/*Estilos de los header de los tables*/
+.thead-helsa{
+    color:#fff;
+    background: #051C59;
+}

@@ -59,6 +59,17 @@ function validaForm(nombreDiv){
     return resu;
 }
 
+//Metodo para vaciar un formulario o un campo en especifico
+function vaciaForm(nombreDiv){
+    //Se utiliza la variable 'div' para sacar a todos los input que se encuentre dentro de un div
+    //Y que se guarden en un arreglo
+    let div = $("#"+nombreDiv+" .form-control");
+    //Se hace el recorrido de los elementos input
+    for(var x=0;x<div.length;x++){
+        $(div[x]).val('');
+    }
+}
+
 // Metodo para que un input number no acepte signos de operadores (+-.)
 function caracteresEspecificos(e) {
     //Se declara la variable tecla para guardar la tecla presionada
@@ -104,3 +115,37 @@ function sinCeros(input,valor) {
 		}
 	}
 }
+
+function cargaTabla(nombreDiv,nombreTabla,direccion){
+    $.ajax({
+        type: "GET",
+        url: direccion,
+        success: function(resu){
+            if(atrapaErrores(resu) == false){
+                $("#divAlert").attr("style","display:block");
+                $("#pAlert").html("<span>"+resu+"</span>");
+                return;
+            }
+            $("#"+nombreDiv).html(resu);
+            $("#"+nombreTabla).DataTable({
+                language: {
+                    url : "http://cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json"
+                }
+            });
+        },
+        error: function(mensaje){
+            swal("Error " + mensaje.status, mensaje.statusText, "error");
+        }
+    });
+}
+
+function soloNumeros(key) {
+    //getting key code of pressed key
+    var keycode = (key.which) ? key.which : key.keyCode;
+    //comparing pressed keycodes
+    if (keycode > 31 && (keycode < 96 || keycode > 105) && (keycode < 48 || keycode > 57) && keycode != 46) {
+      alert(" Solo puedes escribir números del 0 al 9");
+      return false;
+    }
+    else return true;
+  }  

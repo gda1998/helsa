@@ -1,0 +1,31 @@
+#logoHelsa{
+    width: 100px;
+    margin-top: -10px;
+}
+
+.footer-right{
+    float: right;
+}
+
+em{
+    margin-right: 10px;
+}
+
+#spanTotal{
+    margin-left: 70px;
+}
+
+@media screen and (max-width: 540px){
+    #fechaCompra{
+        margin-top:10px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    #spanTotal{
+        margin-left: 0px;
+    }
+    em{
+        margin-right: 0px;
+    }
+}

@@ -17,18 +17,17 @@
         <ul class="sidebar-menu">
           <li class="header">Menú de Navegación</li>
           <li>
-            <a href="inicio.php"><i class="glyphicon glyphicon-home"></i> <span>Inicio</span></a>
-          </li>
-          <li>
-            <a href="productos.php"><i class="glyphicon glyphicon-tags"></i> <span>Productos</span></a>
+            <a href="indexAdm.php"><i class="glyphicon glyphicon-home"></i> <span>Inicio</span></a>
           </li>
           <li class="treeview">
             <a href="#">
-              <i class="glyphicon glyphicon-inbox"></i> <span>Pedidos</span> <i class="fa fa-angle-left pull-right"></i>
+              <i class="glyphicon glyphicon-open"></i> <span>Nuevo</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-              <li><a href="pedidos_proceso.php"><i class="glyphicon glyphicon-time"></i> En Proceso</a></li>
-              <li><a href="#"><i class="glyphicon glyphicon-ok-sign"></i> Entregados</a></li>
+              <li><a href="InsertCli.php"><i class="fa fa-circle-o"></i> Cliente</a></li>
+            </ul>
+            <ul class="treeview-menu">
+              <li><a href="InsertEmp.php"><i class="fa fa-circle-o"></i> Empleado</a></li>
             </ul>
           </li>
         </ul>
